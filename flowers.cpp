@@ -121,7 +121,7 @@ int flowersAndBees(const char words[][7], int wordnum, char input[]) {
 		}
 		else {
 			for (int j = 0; j < (int) strlen(input); j++) {
-				if (input[j] == words[wordnum][i]) { //breaks from loop if any character in input is a bee for the character in words[wordnum][i], assuming no flowers
+				if (input[j] == words[wordnum][i] && input[j]!=words[wordnum][j]) { //breaks from loop if any character in input is a bee for the character in words[wordnum][i], assuming no flowers
 					bees++;
 					input[j] = ' '; //makes sure that character in input will never be a bee or flower for more than one character
 					break;
